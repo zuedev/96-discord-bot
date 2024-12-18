@@ -48,7 +48,11 @@ async function cronSetup() {
   new CronJob(
     "0 9 * * 1-5",
     async () => {
-      await state.client.send("Good morning! ☀️ Time to wake up! ⏰");
+      let message = "Good morning! ☀️ Time to wake up! ⏰";
+      console.log(`Sending message to client: ${message}`);
+      await state.client.send(message);
+      await state.manager.send(`Sent message to client: ${message}`);
+      console.log("Message sent!");
     },
     null,
     true,
@@ -70,7 +74,10 @@ async function cronSetup() {
       message += "- Refill water 💧";
       message += "\n";
 
+      console.log(`Sending message to client: ${message}`);
       await state.client.send(message);
+      await state.manager.send(`Sent message to client: ${message}`);
+      console.log("Message sent!");
     },
     null,
     true,
@@ -81,7 +88,11 @@ async function cronSetup() {
   new CronJob(
     "55 18 * * 1,3,4",
     async () => {
-      await state.client.send("5 minutes until stream time! ⏳");
+      let message = "5 minutes until stream time! ⏳";
+      console.log(`Sending message to client: ${message}`);
+      await state.client.send(message);
+      await state.manager.send(`Sent message to client: ${message}`);
+      console.log("Message sent!");
     },
     null,
     true,
@@ -92,7 +103,11 @@ async function cronSetup() {
   new CronJob(
     "0 19 * * 1,3,4",
     async () => {
-      await state.client.send("Time to go live! 🚀 Good luck! ❤️");
+      let message = "Time to go live! 🚀 Good luck! ❤️";
+      console.log(`Sending message to client: ${message}`);
+      await state.client.send(message);
+      await state.manager.send(`Sent message to client: ${message}`);
+      console.log("Message sent!");
     },
     null,
     true,
