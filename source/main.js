@@ -59,9 +59,9 @@ async function cronSetup() {
     "America/Chicago"
   );
 
-  // Monday, Wednesday, and Thursday @ 1800 CST: Stream prep
+  // Monday, Wednesday, and Thursday @ 1855 CST: Stream prep
   new CronJob(
-    "0 18 * * 1,3,4",
+    "55 18 * * 1,3,4",
     async () => {
       let message = "# Stream Prep Time! 🛠️";
       message += "\n\n";
@@ -73,22 +73,6 @@ async function cronSetup() {
       message += "\n";
       message += "- Refill water 💧";
       message += "\n";
-
-      console.log(`Sending message to client: ${message}`);
-      await state.client.send(message);
-      await state.manager.send(`Sent message to client: ${message}`);
-      console.log("Message sent!");
-    },
-    null,
-    true,
-    "America/Chicago"
-  );
-
-  // Monday, Wednesday, and Thursday @ 1855 CST: Stream reminder
-  new CronJob(
-    "55 18 * * 1,3,4",
-    async () => {
-      let message = "5 minutes until stream time! ⏳";
       console.log(`Sending message to client: ${message}`);
       await state.client.send(message);
       await state.manager.send(`Sent message to client: ${message}`);
