@@ -65,6 +65,8 @@ async function cronSetup() {
     async () => {
       let message = "# Stream Prep Time! 🛠️";
       message += "\n\n";
+      message += "Stream starts in 5 minutes!";
+      message += "\n";
       message += "## Checklist 📋";
       message += "\n";
       message += "- Go live on Twitter 🐦";
