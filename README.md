@@ -1,2 +1,3 @@
-# yayjaybae-discord-bot
-A Discord bot for YayJayBae
+# 96-discord-bot
+
+A Discord bot for [96](https://96.zue.dev)
