@@ -6,7 +6,6 @@ const state = {};
 // check for required environment variables
 [
   "DISCORD_BOT_TOKEN",
-  "DISCORD_GUILD_ID",
   "DISCORD_USER_ID_MANAGER",
   "DISCORD_USER_ID_CLIENT",
 ].forEach((variable) => {
@@ -15,19 +14,10 @@ const state = {};
 });
 
 const discord = new Discord({
-  intents: [GatewayIntentBits.Guilds],
+  intents: Object.values(GatewayIntentBits),
 });
 
 discord.once(Events.ClientReady, async () => {
-  // are we in the correct guild?
-  if (!discord.guilds.cache.has(process.env.DISCORD_GUILD_ID))
-    throw new Error("Bot is not in the correct guild!");
-
-  // are we in any other guilds? if so, leave them
-  discord.guilds.cache.forEach((guild) => {
-    if (guild.id !== process.env.DISCORD_GUILD_ID) guild.leave();
-  });
-
   // set up initial state
   state.manager = await discord.users.fetch(
     process.env.DISCORD_USER_ID_MANAGER
