@@ -14,27 +14,48 @@ export default [
       // Weekdays @ 0900 CST: Wake up!
       [
         "0 9 * * 1-5",
-        "Good morning! ☀️ Time to wake up! ⏰",
+        "Good morning! ☀️ Time to wake up! ⏰ Make sure you eat before 10am! 🍳🥞🥓",
         "America/Chicago",
       ],
-      // Monday, Wednesday, and Thursday @ 1855 CST: Stream prep
+      // Weekdays @ 1300 CST: Eat lunch!
+      ["0 13 * * 1-5", "Time to eat lunch! 🍔🥗🍕", "America/Chicago"],
+      // Monday, Wednesday, and Thursday @ 1800 CST: Nap if you need it!
       [
-        "55 18 * * 1,3,4",
-        [
-          "# Stream Prep Time! 🛠️",
-          "",
-          "Stream starts in 5 minutes!",
-          "## Checklist 📋",
-          "- Go live on Twitter 🐦",
-          "- Go Post to all the socials 📣",
-          "- Refill water 💧",
-        ],
+        "0 18 * * 1,3,4",
+        "It's one hour before stream time! If you need a nap, now's the time! 😴",
         "America/Chicago",
       ],
       // Monday, Wednesday, and Thursday @ 1900 CST: Stream start
       [
         "0 19 * * 1,3,4",
-        "Time to go live! 🚀 Good luck! ❤️",
+        [
+          "# Stream Prep Time! 🛠️",
+          "Time to go live! 🚀 Good luck! ❤️",
+          "## Checklist 📋",
+          "- Go Post to all the socials 📣",
+          "- Refill water 💧",
+          "- Check audio levels 🎙️",
+        ],
+        "America/Chicago",
+      ],
+      // Monday, Wednesday, and Thursday @ 1910 CST: Go live on Twitter and YouTube
+      [
+        "10 19 * * 1,3,4",
+        "Go live on Twitter and YouTube! 🐦📹",
+        "America/Chicago",
+      ],
+      // Tuesday, Friday, and Sunday @ 1900 CST: Post to socials
+      [
+        "0 19 * * 2,5,0",
+        [
+          "# Social Media Time! 📣",
+          "Time to post to all the socials! 🐦📸📹",
+          "## Checklist 📋",
+          "- TikTok 📹",
+          "- Twitter 🐦",
+          "- Instagram 📸",
+          "- YouTube 📹",
+        ],
         "America/Chicago",
       ],
     ],
