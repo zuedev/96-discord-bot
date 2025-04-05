@@ -48,13 +48,7 @@ export default [
       [
         "0 19 * * 2,5,0",
         [
-          "# Social Media Time! 📣",
-          "Time to post to all the socials! 🐦📸📹",
-          "## Checklist 📋",
-          "- TikTok 📹",
-          "- Twitter 🐦",
-          "- Instagram 📸",
-          "- YouTube 📹",
+          "Time to post to your 4 main socials!",
         ],
         "America/Chicago",
       ],
