@@ -75,7 +75,7 @@ export default [
     discord_id: "1113687477937512478",
     cronjobs: [
       // Weekdays @ 1900 EST: Work on new model debut
-      ["0 19 * * 1-5", "**REMINDER:** Work on new model debut!", "America/New_York"],
+      // ["0 19 * * 1-5", "**REMINDER:** Work on new model debut!", "America/New_York"],
     ],
   },
 ];
