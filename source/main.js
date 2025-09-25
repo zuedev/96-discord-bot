@@ -50,10 +50,10 @@ function sendReminderCron(discord_id, cronTime, message, timezone = "Etc/UTC") {
       console.log(`Sending message to "${discord_id}" discord ID: ${message}`);
       await messageDiscordId(discord_id, message);
 
-      console.log(`Sending message to all of management: ${message}`);
-      await messageManagement(
-        `Reminder for <@${discord_id}>:\n\`\`\`\n${message}\n\`\`\``
-      );
+      // console.log(`Sending message to all of management: ${message}`);
+      // await messageManagement(
+      //   `Reminder for <@${discord_id}>:\n\`\`\`\n${message}\n\`\`\``
+      // );
     },
     null,
     true,
